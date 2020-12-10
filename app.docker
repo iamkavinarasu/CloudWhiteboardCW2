@@ -1,0 +1,15 @@
+FROM ubuntu:bionic
+ 
+WORKDIR /doodle
+
+RUN apt update
+RUN apt -y upgrade
+RUN  apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates wget
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+#Install nodejs
+RUN  apt -y install nodejs
+
+#Application Port
+EXPOSE 8081 8081
+
+CMD ["npm", "start"]

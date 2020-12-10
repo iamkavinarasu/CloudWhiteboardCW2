@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Collaborative whiteboard</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Pacifico'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+  <div id="canvas"></div>
+  <div id="tools">
+    <div class="tool selected"><i class="fas fa-square-full"></i></div>
+    <div class="tool"><i class="fas fa-circle"></i></div>
+  </div>
+</main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js'></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>
