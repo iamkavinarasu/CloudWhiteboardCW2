@@ -8,8 +8,16 @@ RUN  apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 #Install nodejs
 RUN  apt -y install nodejs
+#Install PM2
+RUN npm install -g pm2 -y
+#Install Redis
+RUN apt install redis-server -y
+#Install node packages
+RUN npm install
+#Daemonize Redis
+RUN redis-server --daemonize yes
 
 #Application Port
 EXPOSE 8081 8081
 
-CMD ["npm", "start"]
+#CMD ["npm", "start"]

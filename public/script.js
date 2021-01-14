@@ -1,5 +1,7 @@
 // Creating a socket
-var socket = io()
+var socket = io({
+  transports: [ 'websocket', 'polling' ]
+})
 
 var toolId = 0 
 var toolsList = document.querySelectorAll(".tool")
